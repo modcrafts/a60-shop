@@ -23,5 +23,6 @@ function random(max){
       return v;
   }
 };
-document.getElementById("a60_img").setAttribute("src","a60/"+random(7)+".jpg");
+var srand = random(7)
+document.getElementById("a60_img").setAttribute("src","a60/"+srand()+".jpg");
 </script>
