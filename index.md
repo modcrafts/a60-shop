@@ -1,6 +1,6 @@
 ## A60 超市 | 超市 A60
 
-<img id="a60_img" src="a60/.jpg" />
+<img id="a60_img" src="a60/.jpg" οnclick="changePic()" />
 
 <script>
 function random(max){
@@ -23,6 +23,10 @@ function random(max){
       return v;
   }
 };
-var srand = random(7)
-document.getElementById("a60_img").setAttribute("src","a60/"+srand()+".jpg");
+
+var srand = random(7);
+function changePic() {
+document.getElementById("a60_img").setAttribute("src","a60/"+srand()+".jpg"); 
+};
+changePic();
 </script>
