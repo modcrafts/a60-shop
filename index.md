@@ -1,6 +1,6 @@
 ## A60 超市 | 超市 A60
 
-<img id="a60_img" src="a60/.jpg" οnclick="changePic()" />
+<img id="a60_img" src="a60/.jpg" onclick="changePic()" />
 
 <script>
 function random(max){
