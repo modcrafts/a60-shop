@@ -24,7 +24,7 @@ function random(max){
   }
 };
 
-var srand = random(7);
+var srand = random(8);
 function changePic() {
 document.getElementById("a60_img").setAttribute("src","a60/"+srand()+".jpg"); 
 };
