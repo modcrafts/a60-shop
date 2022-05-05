@@ -3,29 +3,25 @@
 <img id="a60_img" src="a60/.jpg" />
 
 <script>
- ````
+function random(max){
+  var r ,v;
+  var arr = [];
+  return function create(){
+      if(arr.length === 0){
+          for(var i = 0;i < max;i++){
+              arr.push(i+1)
+          }
+      }
+      r = Math.ceil(Math.random() * (arr.length-1));
+      v = arr[r];
+      if(arr.length === 1){
+          arr = []
+      }else{
+         arr.splice(r,r);
+      }
 
-            function random(max){
-              var r ,v;
-              var arr = [];
-              return function create(){
-                  if(arr.length === 0){
-                      for(var i = 0;i < max;i++){
-                          arr.push(i+1)
-                      }
-                  }
-                  r = Math.ceil(Math.random() * (arr.length-1));
-                  v = arr[r];
-                  if(arr.length === 1){
-                      arr = []
-                  }else{
-                     arr.splice(r,r);
-                  }
-          
-                  return v;
-              }
-            };
-            document.getElementsById("a60_img").setAttribute("src","a60/"+random(7)+".jpg");
-          
- ````
+      return v;
+  }
+};
+document.getElementsById("a60_img").setAttribute("src","a60/"+random(7)+".jpg");
 </script>
