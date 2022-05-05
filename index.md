@@ -23,5 +23,5 @@ function random(max){
       return v;
   }
 };
-document.getElementsById("a60_img").setAttribute("src","a60/"+random(7)+".jpg");
+document.getElementById("a60_img").setAttribute("src","a60/"+random(7)+".jpg");
 </script>
