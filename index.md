@@ -26,7 +26,7 @@ function random(max){
 
 var srand = random(14);
 function changePic() {
-document.getElementById("a60_img").setAttribute("src","a60/"+srand()+".jpg"); 
+    document.getElementById("a60_img").setAttribute("src","a60/"+srand()+".jpg"); 
 };
 changePic();
 </script>
