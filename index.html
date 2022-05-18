@@ -9,8 +9,14 @@
     <title>A60 超市 | 超市 A60</title>
 
     <style>
+        @media screen and (max-width: 992px) {
+            #a60_img {
+                width: 100%;
+            }
+        }
+
         #a60_img {
-            width: 100%;
+            width: 50%;
         }
 
         footer {
@@ -78,12 +84,14 @@
 
             <h3 id="index_show">#</h3>
 
-            <img id="a60_img" src="" alt="a60.shop" onclick="changePic()">
+            <center>
+                <img id="a60_img" src="" alt="a60.shop" onclick="changePic()">
+            </center>
 
             <script>
                 changePic();
                 const img = document.getElementById("a60_img")
-                img.onload = function() {
+                img.onload = function () {
                     document.getElementById("index_show").setAttribute("aria-busy", "false");
                 }
             </script>
@@ -92,7 +100,7 @@
         <footer>
             <p>
                 ❤Just for A60❤
-                <br/>
+                <br />
                 Maintained by modcrafts | Published with GitHub Pages
             </p>
         </footer>
