@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="a60.shop 超市a60">
+    <meta name="author" content="modcrafts">
+    <title>A60 超市 | 超市 A60</title>
+
+    <style>
+        #a60_img {
+            width: 100%;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.8em;
+        }
+    </style>
+
+    <link rel="stylesheet" href="picocss/css/pico.css">
+
+    <script>
+        function random(max) {
+            var r, v;
+            var arr = [];
+            return function create() {
+                if (arr.length === 0) {
+                    for (var i = 0; i < max; i++) {
+                        arr.push(i + 1)
+                    }
+                }
+                r = Math.ceil(Math.random() * (arr.length - 1));
+                v = arr[r];
+                if (arr.length === 1) {
+                    arr = []
+                } else {
+                    arr.splice(r, r);
+                }
+
+                return v;
+            }
+        };
+
+        var srand = random(22);
+        function changePic() {
+            const img = document.getElementById("a60_img")
+            const index = document.getElementById("index_show")
+            img.setAttribute("src", "");
+            index.setAttribute("aria-busy", "true");
+            const i = srand();
+            img.setAttribute("src", "a60/" + i + ".jpg");
+            index.innerText = "# " + i;
+        };
+    </script>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <nav>
+            <ul>
+                <li><strong>a60.shop</strong></li>
+            </ul>
+            <ul>
+                <li><a href="https://github.com/modcrafts/a60-shop" target="_blank">Github</a></li>
+                </u>
+        </nav>
+
+        <hgroup>
+            <h1>A60 超市</h1>
+            <h2>超市 A60🥵</h2>
+        </hgroup>
+
+        <article id="main_content">
+
+            <h3 id="index_show">#</h3>
+
+            <img id="a60_img" src="" alt="a60.shop" onclick="changePic()">
+
+            <script>
+                changePic();
+                const img = document.getElementById("a60_img")
+                img.onload = function() {
+                    document.getElementById("index_show").setAttribute("aria-busy", "false");
+                }
+            </script>
+        </article>
+
+        <footer>
+            <p>
+                a60.shop maintained by modcrafts
+                <br/>
+                Published with GitHub Pages
+            </p>
+        </footer>
+
+    </main>
+
+</body>
+
+</html>
